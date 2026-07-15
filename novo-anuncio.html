@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Anúncio - TrocaFácil</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>TrocaFácil</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="perfil.html">Meu Perfil</a>
+        <button id="btnSair">Sair</button>
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <h2>Novo Anúncio</h2>
+
+    <form id="formAnuncio">
+
+        <label>Título</label>
+        <input
+            type="text"
+            id="titulo"
+            required
+            placeholder="Ex.: Notebook Dell Inspiron"
+        >
+
+        <label>Categoria</label>
+
+        <select id="categoria" required>
+
+            <option value="">Selecione</option>
+
+            <option>Eletrônicos</option>
+            <option>Celulares</option>
+            <option>Computadores</option>
+            <option>Móveis</option>
+            <option>Roupas</option>
+            <option>Calçados</option>
+            <option>Livros</option>
+            <option>Esportes</option>
+            <option>Brinquedos</option>
+            <option>Outros</option>
+
+        </select>
+
+        <label>Tipo do anúncio</label>
+
+        <select id="tipo" required>
+
+            <option value="">Selecione</option>
+
+            <option>Venda</option>
+            <option>Troca</option>
+            <option>Doação</option>
+
+        </select>
+
+        <div id="campoValor">
+
+            <label>Valor (R$)</label>
+
+            <input
+                type="number"
+                id="valor"
+                min="0"
+                step="0.01"
+                placeholder="0,00"
+            >
+
+        </div>
+
+        <label>Estado do produto</label>
+
+        <select id="estado" required>
+
+            <option>Novo</option>
+            <option>Semi Novo</option>
+            <option>Usado</option>
+
+        </select>
+
+        <label>Cidade</label>
+
+        <input
+            type="text"
+            id="cidade"
+            required
+        >
+
+        <label>Telefone para contato</label>
+
+        <input
+            type="tel"
+            id="telefone"
+            placeholder="(00) 00000-0000"
+            required
+        >
+
+        <label>Descrição</label>
+
+        <textarea
+            id="descricao"
+            rows="6"
+            required
+            placeholder="Descreva o produto..."
+        ></textarea>
+
+        <label>Imagens (até 5)</label>
+
+        <input
+            type="file"
+            id="imagens"
+            multiple
+            accept="image/*"
+        >
+
+        <button type="submit">
+
+            Publicar Anúncio
+
+        </button>
+
+    </form>
+
+</main>
+
+<script src="js/anuncios.js"></script>
+
+</body>
+
+</html>

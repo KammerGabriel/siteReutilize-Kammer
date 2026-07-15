@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Perfil - TrocaFácil</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>TrocaFácil</h1>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Início</a>
+
+        <a href="novo-anuncio.html">Novo Anúncio</a>
+
+        <a href="perfil.html">Meu Perfil</a>
+
+        <button id="btnSair">Sair</button>
+
+    </nav>
+
+</header>
+
+<main class="container">
+
+    <section class="perfil-card">
+
+        <h2>Meu Perfil</h2>
+
+        <div class="dados-perfil">
+
+            <p>
+                <strong>Nome:</strong>
+                <span id="perfilNome"></span>
+            </p>
+
+            <p>
+                <strong>E-mail:</strong>
+                <span id="perfilEmail"></span>
+            </p>
+
+            <p>
+                <strong>Total de anúncios:</strong>
+                <span id="perfilQuantidade"></span>
+            </p>
+
+            <p>
+                <strong>ID do usuário:</strong>
+                <span id="perfilId"></span>
+            </p>
+
+        </div>
+
+        <div class="acoes-perfil">
+
+            <button id="btnEditarPerfil">
+
+                Editar Perfil
+
+            </button>
+
+            <button id="btnSairPerfil">
+
+                Sair
+
+            </button>
+
+        </div>
+
+    </section>
+    <section class="meus-anuncios">
+
+    <h2>Meus Anúncios</h2>
+
+    <p id="quantidadeAnuncios"></p>
+
+    <div id="listaMeusAnuncios" class="lista-anuncios">
+
+    </div>
+
+</section>
+
+</main>
+
+<script src="js/anuncios.js"></script>
+
+</body>
+
+</html>

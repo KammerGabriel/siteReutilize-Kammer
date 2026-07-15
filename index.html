@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reutilize! - Marketplace Sustentável</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <h1>Reutilize!</h1>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">Início</a>
+
+        <a href="novo-anuncio.html">Novo Anúncio</a>
+
+        <a href="perfil.html">Meu Perfil</a>
+
+        <button id="btnSair">Sair</button>
+
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-texto">
+
+        <h2 id="nomeUsuario">Bem-vindo!</h2>
+
+        <p>
+            Venda, troque ou doe objetos que você não utiliza mais e contribua
+            para um consumo mais sustentável.
+        </p>
+
+        <a href="novo-anuncio.html">
+            <button class="btn-publicar">
+                Publicar Anúncio
+            </button>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="pesquisa">
+
+    <input
+        type="text"
+        id="pesquisa"
+        placeholder="Pesquisar produtos..."
+    >
+
+    <select id="filtroCategoria">
+
+        <option value="">Todas as categorias</option>
+
+        <option>Eletrônicos</option>
+        <option>Celulares</option>
+        <option>Computadores</option>
+        <option>Móveis</option>
+        <option>Roupas</option>
+        <option>Calçados</option>
+        <option>Livros</option>
+        <option>Esportes</option>
+        <option>Brinquedos</option>
+        <option>Outros</option>
+
+    </select>
+
+    <select id="filtroTipo">
+
+        <option value="">Todos</option>
+
+        <option>Venda</option>
+
+        <option>Troca</option>
+
+        <option>Doação</option>
+
+    </select>
+
+</section>
+
+
+<main class="container">
+    <div id="listaAnuncios" class="lista-anuncios">
+
+    </div>
+
+</main>
+
+<footer>
+
+    <p>
+
+        © 2026 Reutilize!
+
+    </p>
+
+    <p>
+
+        Incentivando a reutilização, venda, troca e doação de objetos.
+
+    </p>
+
+</footer>
+
+<script src="js/anuncios.js"></script>
+
+<script>
+
+const anuncios = JSON.parse(localStorage.getItem("anuncios")) || [];
+
+const total = document.getElementById("totalAnuncios");
+
+if(total){
+
+    total.textContent = anuncios.length;
+
+}
+
+</script>
+
+</body>
+
+</html>
